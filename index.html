@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            height: 100px;
+            width: 300px;
+            background-color: rgba(73, 38, 38, 0.952);
+            position: relative;
+            left: 461px;
+            bottom: 25px;
+        }
+
+        .head{
+            height: 110px;
+            width: 150px;
+            background-color: rgba(73, 38, 38, 0.952);
+            position: relative;
+            top: 73px;
+            left: 723px;
+        }
+        .eye{
+            background: linear-gradient(#030303,black,white);
+            height: 23px;
+            width: 23px;
+            border-radius: 20px;
+        }
+        .leg1{
+            background-color: rgba(73, 38, 38, 0.952);
+            height: 172px;
+            width: 50px;
+            position: absolute;
+            left: 510px;
+            bottom: 13px;
+        }
+        #leg{
+            position: relative;
+            top: 85px;
+        }
+        .leg2{
+            background-color: rgba(73, 38, 38, 0.952);
+            height: 32px;
+            width: 90px;
+            position: absolute;
+            left: 510px;
+            bottom: 13px;
+        }
+        @keyframes move{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(57deg);
+            }
+        }
+        .hidden{
+            background-color: brown;
+            height: 32px;
+            width:93px;
+            position: relative;
+            left: 59px;
+            top: 20px;
+        }
+        .animate{
+          animation: move 1s infinite;
+          position: relative;
+        top: 90px;
+        }
+        .tall{
+
+            height: 40px;
+            width: 300px;
+            background-color: rgba(73, 38, 38, 0.952);
+            position: relative;
+            left: 192px;
+            bottom: 100px;
+            border-top-left-radius: 69px;
+            border-bottom-left-radius: 69px;
+
+        }
+        button{
+            display: inline-flex;
+            align-items: center;
+            border: 2px solid brown;
+            height: 53px;
+            justify-content: space-between;
+            position: relative;
+            top: 23px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="game">
+            <div class="dino" style="height: 280px; width: 100%; border: 4px solid brown; background-color: brown;">
+              <div class="head">
+                <div class="eye"></div>
+                <div class="hidden" id="hidden"></div>
+              </div>
+              <div class="body"></div>
+              <div id="leg">
+                <div class="leg1"></div>
+                <div class="leg2"></div>
+              </div>
+              <div class="tall"></div>
+            </div>
+        </div>
+
+        <button onclick="document.getElementById('leg').classList.add('animate')"
+        ondblclick="document.getElementById('leg').classList.remove('animate')"
+        >Running</button>
+        <button onclick=" document.getElementById('hidden').style.display='none' "
+        ondblclick="document.getElementById('hidden').style.display='block'">Opening and Closing Mouth</button>
+        
+    </div>
+</body>
+<script>
+</script>
+</html>
